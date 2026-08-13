@@ -151,6 +151,59 @@
 
     <div class="container">
 
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Horizontal</title>
+    <style>
+        /* Contenedor principal de la cajita */
+        .contenedor-fotos {
+            display: flex; /* Alinea los elementos en fila */
+            gap: 15px; /* Espacio de separación entre cada foto */
+            padding: 15px; /* Espacio interno de la cajita */
+            background-color: #f5f5f5; /* Color de fondo de la cajita */
+            border-radius: 8px; /* Bordes redondeados de la cajita */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave para dar volumen */
+            max-width: 100%; /* Evita que se salga de la pantalla */
+            box-sizing: border-box;
+        }
+
+        /* Estilo para cada una de las fotos */
+        .contenedor-fotos img {
+            width: 25%; /* Divide el espacio en 4 partes iguales */
+            height: auto; /* Mantiene la proporción de la imagen */
+            object-fit: cover; /* Recorta la imagen para que llene el espacio sin deformarse */
+            border-radius: 4px; /* Bordes redondeados para las fotos */
+            aspect-ratio: 1 / 1; /* Hace que las fotos sean perfectamente cuadradas (opcional) */
+        }
+
+        /* Adaptación para pantallas pequeñas (Celulares) */
+        @media (max-width: 600px) {
+            .contenedor-fotos {
+                flex-wrap: wrap; /* Permite que las fotos bajen si no caben */
+            }
+            .contenedor-fotos img {
+                width: calc(50% - 8px); /* Muestra 2 fotos por fila en celulares */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Esta es la cajita contenedor -->
+    <div class="contenedor-fotos">
+        <img src="tallercorto.png" alt="Descripción foto 1">
+        <img src="tallerlargo.png" alt="Descripción foto 2">
+        <img src="Captura de pantalla 2026-08-12 180927.png" alt="Descripción foto 3">
+    </div>
+
+</body>
+</html>
+
+        
         <!-- Barra de Datos Rápidos con Iconos -->
         <section class="datos-rapidos">
             <div class="dato-item">
@@ -196,9 +249,9 @@
             </ul>
 
             <div class="galeria">
-                <img src="https://unsplash.com" alt="Interior del local 1">
-                <img src="https://unsplash.com" alt="Interior del local 2">
-                <img src="https://unsplash.com" alt="Fachada comercial">
+                <img src="Captura de pantalla 2026-08-12 180927.png" alt="Interior del local 1">
+                <img src="tallercorto.png" alt="Interior del local 2">
+                <img src="tallerlargo.png" alt="Fachada comercial">
             </div>
         </section>
 
